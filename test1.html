@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعویض عکس</title>
+</head>
+<body>
+    <img id="image" src="img1.jpg" alt="Image" width="300">
+    <br>
+    <button onclick="changeImage()">عوض کردن عکس</button>
+
+    <script>
+        let images = ["img1.jpg", "img2.jpg"];
+        let currentIndex = 0;
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('image').src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>
